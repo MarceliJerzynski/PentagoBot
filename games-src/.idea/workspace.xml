@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OurPlayer:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="052abef6-e7a9-4701-bc56-262434a205a7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WZK44WMWPzqEe1vPJGZmJk0rXN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Players/OurPlayer/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Players/OurPlayer/src/main/resources" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Players/OurPlayer/src/main/java/put.io.games.ourplayer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Players" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OurPlayer">
+    <configuration name="MainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="put.ai.games.gui.MainWindow" />
+      <module name="GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="put.ai.games.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OurPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="put.ai.games.ourplayer.OurPlayer" />
+      <module name="OurPlayer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="put.ai.games.ourplayer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OurPlayer" />
+        <item itemvalue="Application.MainWindow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="052abef6-e7a9-4701-bc56-262434a205a7" name="Default Changelist" comment="" />
+      <created>1579351482944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579351482944</updated>
+      <workItem from="1579351487508" duration="25681000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="531" y="215" width="847" height="684" key="#Project_Structure" timestamp="1579366102519">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="531" y="215" width="847" height="684" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1579366102519" />
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579355342632">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579355342632" />
+    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1579362439291">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1579362439291" />
+    <state x="964" y="334" width="525" height="439" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579372001856">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="964" y="334" width="525" height="439" key="#com.intellij.ide.util.TreeClassChooserDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579372001856" />
+    <state x="563" y="223" width="784" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1579353127208">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="563" y="223" width="784" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579353127208" />
+    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579372010995">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1579372010995" />
+    <state width="1874" height="107" key="GridCell.Tab.0.bottom" timestamp="1579373353891">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="107" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1579373353891" />
+    <state width="1874" height="107" key="GridCell.Tab.0.center" timestamp="1579373353890">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="107" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1579373353890" />
+    <state width="1874" height="107" key="GridCell.Tab.0.left" timestamp="1579373353890">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="107" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1579373353890" />
+    <state width="1874" height="107" key="GridCell.Tab.0.right" timestamp="1579373353890">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="107" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1579373353890" />
+    <state x="724" y="120" width="1024" height="852" key="SettingsEditor" timestamp="1579372014722">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="724" y="120" width="1024" height="852" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1579372014722" />
+    <state x="732" y="333" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1579355034684">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="732" y="333" width="446" height="447" key="chooseDestDirectoryDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579355034684" />
+    <state x="269" y="256" width="1372" height="601" key="new project wizard" timestamp="1579354429722">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="269" y="256" width="1372" height="601" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1579354429722" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1579370338736">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1579370338736" />
+    <state x="685" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579367530885">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="685" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579367530885" />
+  </component>
+</project>
