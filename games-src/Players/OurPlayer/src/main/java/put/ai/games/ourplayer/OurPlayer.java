@@ -15,7 +15,7 @@ import put.ai.games.game.Player;
 
 public class OurPlayer extends Player {
 
-    final int depth = 1;
+    final int depth = 2;
 
     private static class Constants {
 
@@ -39,43 +39,60 @@ public class OurPlayer extends Player {
             if (x.value > y.value) {
                 return y;
             }
+            //System.out.println("Mamy nowa alphe!");
             return x;
         }
 
         static public GameTree.HeuristicValue max(GameTree.HeuristicValue x, GameTree.HeuristicValue y) {
-            if (x.value > y.value) {
+            if (x.value >= y.value) {
+                //System.out.println("Mamy nowa bete!");
                 return x;
             }
             return y;
         }
 
-
+        //public static Move move;
         static public GameTree.HeuristicValue AlphaBeta(GameTree gameTree, int depth, GameTree.HeuristicValue alpha, GameTree.HeuristicValue beta, Type type) {
 
-            gameTree.createChildren();  //stworz mozliwe plansze po tej planszy
-//            System.out.println("DZIECI ZROBIONE");
-            if ( !gameTree.hasChildren() || depth == 0) {   //jesli jest na samym dole grafu lub glebokosc jest rowna 0
-//                System.out.println("BRAK DZIECI, KTOS NIE PORUCHAL");
-
-                return gameTree.getValue();    //zwroc wartosc heurystyki ( wartosc + ruch )
+            if ( depth == 0) {   //jesli glebokosc == 0
+                return gameTree.getValue();    //zwroc wartosc heurystyki ( wartosc + ruch, ktory doprowadzil do tej heurystyki )
             }
-//            System.out.println("GRATULUJEMY ZOSTANIA OJCEM I MATKA");
-            ArrayList<GameTree> children = gameTree.getChildren();
 
+            gameTree.createChildren();  //stworz dzieci
+            if (!gameTree.hasChildren()) {      //jesli nie ma dzieci
+                return gameTree.getValue(); //zwroc wartosc heurystyki ( wartosc + ruch, ktory doprowadzil do tej heurystyki )
+            }
+            ArrayList<GameTree> children = gameTree.getChildren();  //zapisz dzieci
 
             //MAX
             if (type.equals(Type.MAX)) {
                 for (GameTree child : children) {   //dla kazdego dziecka
                     GameTree.HeuristicValue valueOfChildren = AlphaBeta(child,depth -1,alpha,beta,Type.MIN);
-                    alpha = max(valueOfChildren, alpha);
-                    if (alpha.value >= beta.value) return beta;  //odciecie
+                    //alpha = max(valueOfChildren, alpha);
+                    if (valueOfChildren.value >= alpha.value) {
+                        alpha.value = valueOfChildren.value;
+                        alpha.move = child.value.move;
+                    }
+//                    if (alpha.value >= beta.value)  {
+//                        //System.out.println("Odciecie");
+//                        return beta;
+//                    }  //odciecie
                 }
                 return alpha;
+                //MIN
             } else {
                 for (GameTree child : children) {   //dla kazdego dziecka
                     GameTree.HeuristicValue valueOfChildren = AlphaBeta(child,depth -1,alpha,beta,Type.MAX);
-                    beta = min(valueOfChildren, beta);
-                    if (alpha.value >= beta.value) return alpha; //odciecie
+                    //beta = min(valueOfChildren, beta);
+                    if (valueOfChildren.value <= beta.value) {
+                        //move = child.value.move;
+                        beta.value = valueOfChildren.value;
+                        beta.move = child.value.move;
+                    }
+//                    if (alpha.value >= beta.value) {
+//                        //System.out.println("Odciecie");
+//                        return alpha;
+//                    } //odciecie
                 }
                 return beta;
             }
@@ -98,7 +115,7 @@ public class OurPlayer extends Player {
         private Board board;    //kazde drzewo ma korzen
         private ArrayList<GameTree> children;   //kazde drzewo ma dzieci
         private Color color;
-        private HeuristicValue value;
+        public HeuristicValue value;
 
         public GameTree() { //tego nie uzyje pewnie nigdy
             children = new ArrayList<>();
@@ -124,17 +141,11 @@ public class OurPlayer extends Player {
         }
 
         public void createChildren() {   //have sex
-            List <Move> possibleMoves = board.getMovesFor(color);   //stworz mozliwe ruchy
-            //System.out.println("mozliwe ruchy odjebane, jest ich:" + possibleMoves.size());
-            int i = 0;
+            List <Move> possibleMoves = board.getMovesFor(color);   //stworz mozliwe ruchy dla dzieci ( dziecko jest tworzone przez ruch innego przeciwnika
             for (Move move : possibleMoves) {   //dla kazdego ruchu
                 board.doMove(move); //zrob ruch
-                //System.out.println(i + ". Ruch odjebany");
                 children.add(new GameTree(board, getOpponent(color), move));  //stworzone dziecko
-                //System.out.println(i + ". Dzieciak odjebany");
                 board.undoMove(move);   //cofnij ruch
-                //System.out.println(i + ". Ruch cofniety");
-                i++;
             }
         }
 
@@ -142,87 +153,87 @@ public class OurPlayer extends Player {
             return children.size() != 0;
         }
 
-        //nasza heurystyka kurwa
-        private HeuristicValue getValue() {
-            value.value = 0.0f;
-            float combo = 0.0f;
-
-//            for (int i = 0; i < board.getSize(); i++) {
-//                for (int j = 0; j < board.getSize() ; j++) {
-//
-//                    // plusiki za zdobyte nasze pkt
-//                    if (board.getState(i,j) == board.getState(i,j+1) && board.getState(i,j).equals(color)) {
-//                        value.value += combo + addToValue;
-//                        combo += addToCombo;
-//                        System.out.println("DOBRZE SZMATO!");
-//
-//                    } else {
-//                        combo = 0.0f;
-//                    }
-//
-//                    if (board.getState(j,i) == board.getState(j+1,i) && board.getState(j,i).equals(color)) {
-//                        value.value += combo + addToValue;
-//                        combo += addToCombo;
-//                        System.out.println("DOBRZE!!");
-//
-//                    } else {
-//                        combo = 0.0f;
-//                    }
-//
-////                    //jak przeciwnik zdobywa pkt to kara kurwa
-////                    combo = 0;
-////                    if (board.getState(i,j) == board.getState(i,j+1) && board.getState(i,j).equals(getOpponent(color))) {
-////                        value.value = value.value - (combo + removeFromValue);
-////                        combo += removeFromCombo;
-////                        System.out.println("KARA!");
-////
-////                    } else {
-////                        combo = 0.0f;
-////                    }
-////
-////                    if (board.getState(j,i) == board.getState(j+1,i) && board.getState(j,i).equals(getOpponent(color))) {
-////                        value.value = value.value - (combo + removeFromValue);
-////                        combo += removeFromCombo;
-////                        System.out.println("KARA!");
-////
-////                    } else {
-////                        combo = 0.0f;
-////                    }
-//                }
-//            }
-            for(int i = 0; i < board.getSize(); i++) {
-                for (int j = 0; j < board.getSize(); j++) {
-                    if (board.getState(i,j) == board.getState(i,j+1)) { //sa 2
-                        value.value = addToValue;
-                        if (board.getState(i,j) == board.getState(i,j+2)) {
-                            value.value = addToValue + addToCombo;
-                            if (board.getState(i,j) == board.getState(i,j+3)) {
-                                value.value = addToValue + addToCombo * 5;
-                            }
-                        }
+        private float valueOfCenter( Board board, Color color) {
+            float result = 0.0f;
+            for(int k = 1; k < board.getSize(); k=k+3) {
+                for( int l = 1; l < board.getSize(); l=l+3) {
+                    if (board.getState(l, k) == getOpponent(color)) {
+                        result += 5.0f;    //na srodku
+                        //System.out.println("NA SRODKU");
                     }
-                    if (board.getState(i,j) == board.getState(i+1,j)) { //sa 2
-                        value.value = addToValue;
-                        if (board.getState(i,j) == board.getState(i+2,j)) {
-                            value.value = addToValue + addToCombo;
-                            if (board.getState(i,j) == board.getState(i+3,j)) {
-                                value.value = addToValue + addToCombo * 5;
-                            }
-                        }
-                    }
-
-
                 }
             }
 
+            return result;
+        }
 
+        private float valueOfComboRows(Board board, Color color) {
+            float result = 0.0f;
+            for (int i = 0; i < board.getSize(); i++) {
+                for (int j = 0; j < board.getSize(); j++) {
+                    if (board.getState(i, j) == color
+                            && board.getState(i, j) == board.getState(i, j + 1)
+                            && board.getState(i, j) == board.getState(i, j + 2)) { //mamy 3 pod rząd
+                        result += 100.0f;
+                        System.out.println("3 pod rzad!");
+                        if (board.getState(i, j) == board.getState(i, j + 3)) {//4 pod rząd
+                            result += 1000.0f;
+                            System.out.println("4 pod rzad");
+                            if (board.getState(i, j) == board.getState(i, j + 4)) { //5 pod rząd
+                                result += 100000.0f;
+                                System.out.println("5 pod rzad");
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        private float valueOfComboColumns(Board board, Color color) {
+            float result = 0.0f;
+            for (int i = 0; i < board.getSize(); i++) {
+                for(int j = 0; j < board.getSize(); j++) {
+                    if (board.getState(j, i) == color
+                            && board.getState(j, i) == board.getState(j + 1, i)
+                            && board.getState(j, i) == board.getState(j + 2, i)) { //mamy 3 pod rząd
+                        value.value += 100.0f;
+                        System.out.println("3 pod rzad!");
+                        if (board.getState(j, i) == board.getState(j + 3, i)) {//4 pod rząd
+                            value.value += 1000.0f;
+                            System.out.println("4 pod rzad");
+                            if (board.getState(j, i) == board.getState(j + 4, i)) { //5 pod rząd
+                                value.value += 100000.0f;
+                                System.out.println("5 pod rzad");
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+        //nasza heurystyka kurwa
+        private HeuristicValue getValue() {
+
+            value.value = 0.0f;
+            value.value += valueOfCenter(board, getOpponent(color));
+
+            value.value +=valueOfComboRows(board,getOpponent(color));
+            value.value +=valueOfComboColumns(board,getOpponent(color));
+
+            value.value -=valueOfComboRows(board,color);
+            value.value -=valueOfComboRows(board,color);
+
+            if (value.value == 5.0f) {
+                System.out.println("Value: " + value.value);
+            }
             return value;
         }
     }
 
     @Override
     public Move nextMove(Board board) {
-
+        System.out.println("NEXT MOVE ! ------------------------------------------------------------------");
         Color ourColor = getColor();    //nasz kolor (jestesmy pierwsi czy drudzy )
         //Color theirColor = getOpponent(ourColor);   //kolor przeciwnika
         List<Move> possibleMoves = board.getMovesFor(ourColor);
@@ -246,11 +257,13 @@ public class OurPlayer extends Player {
                 beta,
                 ourType);
 
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+
+        for(int k = 1; k < board.getSize(); k=k+3) {
+            for( int l = 1; l < board.getSize(); l=l+3) {
+                System.out.print(board.getState(l, k) + " ");
+            }
+            System.out.println();
+        }
         return result.move;
     }
 

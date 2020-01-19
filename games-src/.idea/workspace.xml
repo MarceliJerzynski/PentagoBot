@@ -6,11 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="052abef6-e7a9-4701-bc56-262434a205a7" name="Default Changelist" comment="" />
+    <list default="true" id="052abef6-e7a9-4701-bc56-262434a205a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/src/main/java/put/ai/games/ourplayer/OurPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/src/main/java/put/ai/games/ourplayer/OurPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree$HeuristicValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree$HeuristicValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$Logic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OurPlayer_jar/OurPlayer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OurPlayer_jar/OurPlayer.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -20,6 +32,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1WZK44WMWPzqEe1vPJGZmJk0rXN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,7 +40,12 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="games" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Players/OurPlayer/src/main/java" />
@@ -100,7 +118,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579351482944</updated>
-      <workItem from="1579351487508" duration="25681000" />
+      <workItem from="1579351487508" duration="35753000" />
+      <workItem from="1579433539545" duration="7601000" />
     </task>
     <servers />
   </component>
@@ -160,10 +179,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="269" y="256" width="1372" height="601" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1579354429722" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1579370338736">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1579390862635">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1579370338736" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1579390862635" />
     <state x="685" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579367530885">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
