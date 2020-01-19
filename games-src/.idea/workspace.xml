@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="052abef6-e7a9-4701-bc56-262434a205a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/OurPlayer/src/main/java/put/ai/games/ourplayer/OurPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/src/main/java/put/ai/games/ourplayer/OurPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree$HeuristicValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree$HeuristicValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$GameTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer$Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Players/OurPlayer/target/classes/put/ai/games/ourplayer/OurPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OurPlayer_jar/OurPlayer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OurPlayer_jar/OurPlayer.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579351482944</updated>
       <workItem from="1579351487508" duration="35753000" />
-      <workItem from="1579433539545" duration="7601000" />
+      <workItem from="1579433539545" duration="9825000" />
     </task>
     <servers />
   </component>
@@ -147,10 +141,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="563" y="223" width="784" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579353127208" />
-    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579372010995">
+    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579447557235">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1579372010995" />
+    <state x="1019" y="308" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1579447557235" />
     <state width="1874" height="107" key="GridCell.Tab.0.bottom" timestamp="1579373353891">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
